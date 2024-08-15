@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+   body {
+        font-family: 'Zain', 'sans-serif';
+        margin: 0;
+        padding: 0;
+        background: #000428;
+        background: linear-gradient(to right, #004e92, #000428);
+        overflow-x: hidden;
+        }
+    button{
+        border-radius:10%;
+
+    }
+    h1{
+        color: aliceblue;
+    }
+    #outer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .content{
+            padding: 6px;
+        padding: 3px;
+        margin:20%;
+            background-color: azure  ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:3%;
+        flex-direction: column;
+            margin:40%;
+            
+    }
+    .content{
+        padding: 8px;
+        margin: 4px;
+        border:4px solid yellowgreen;
+        border-radius: 10%;
+    }
+    p{
+        margin: 0;
+    }
+    #form{
+        
+            position: relative;
+            top:50%;
+            left:40%;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #form{
+        color:aliceblue;
+    }
+    #createree{
+        width: 100px;
+        height: 50px;
+        color:blanchedalmond;
+        background-color: #000428;
+    }
+    h2{
+        padding-left: 0px;
+        color:antiquewhite;
+        font-family:Arial, Helvetica, sans-serif;
+        text-align: center;
+
+    }
+    .headings{
+        background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);  
+
+    }
+    .container{
+        padding: 0;
+        margin: 0;
+
+    }
+    h1{
+        font-family:Arial, Helvetica, sans-serif;
+        text-align: center;
+}
+h3{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+    color:darkgray
+}
+.upta{
+    background-color: green;
+    font-size: large;
+    color:antiquewhite
+
+}
+.delta{
+    background-color: red;
+    font-size: large;
+    color:#fee140;
+}
+#formname,#formdescription,#formprice,#formcategory,#formquantity,#formbrand,#formweight,#formcolor{
+    border: 2px solid #4CAF50; 
+    padding: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+#submit{
+    padding: 10px;
+    color:wheat  ;
+    background-color:   chocolate;
+    font-size: larger;
+    
+}
+.content{
+    width:200px;
+}
+#outer{
+    justify-content: center;
+}
+.h3l{
+    font-weight: bolder;
+    color: #000428  ;
+}
+#form{
+    width: 20%;
+    
+}
+.submitbutton{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+h3{
+    font-size: large;
+    padding: 0%;
+    margin: 0%;
+    color: rgb(245, 154, 154);
+    font-weight: 300;
+    font-style: italic;
+}
+.createbutton{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+h1{
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+}
+h2{
+      font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.labell{
+    font-size: medium;
+    font-style: oblique;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+
+<body>
+    <div class="container">
+    <div class="headings">
+        <h1>CRUD OPERATIONS</h1>
+    
+    
+ <h2>To create a item click on create item</h2> 
+ <div class="createbutton">
+ <button onclick="createItem()" id="createree">Create Item</button>
+</div>
+</div>
+<div class="pop">
+ <div id="form">
+        <h3  style="text-align: center;">Item Name :</h3>
+        <input type="text" id="formname"> <br>
+        <h3  style="text-align: center;">Description:</h3>
+        <input type="text" id="formdescription"><br>
+        <h3  style="text-align: center;"> Price:</h3>
+        <input type="number"  id="formprice"><br>
+        <h3  style="text-align: center;">Category</h3>
+        <select id="formcategory">
+            <option>Cosmetic</option>
+            <option>Technology</option>
+            <option>Commodity</option>
+            <option>Eatery</option>
+            <option>Appliance</option>
+            <option>Stationary</option>
+            <option>Screen Amoled</option>
+            <option>Screen LCD</option>
+        </select><br>
+
+           <h3 style="text-align: center;">Quantity</h3>
+           <input type="number"  id="formquantity"><br>
+<h3  style="text-align: center;">Brand:</h3>
+<input type="text" id="formbrand"><br>
+<h3  style="text-align: center;">Weight:</h3>
+<input type="number"  id="formweight"><br>
+ <h3 style="text-align: center;" >Color:</h3>
+ <input type="text" id="formcolor"><br> 
+ <div class="submitbutton">
+<button id="submit" >Submit</button>
+</div>
+</div>
+
+
+    </div>
+    <div class="upper">
+    <div id="inventory"> 
+    <h2 style="text-align: center;">ALL THE INVENTORY DATA</h2>
+        <div id="data">
+                <div id="outer">
+        
+                        </div>
+                
+                </div>
+        </div>
+      
+</div>
+    </div>
+    <div class="lower">
+
+    </div>
+</div>
+<script src="./script.js"></script>
+</body>
+</html>
